@@ -1,11 +1,28 @@
 <html>
     <head>
+        <script>
+            function backgroundChange() {
+                document.getElementById("Body").style.backgroundColor = "green";
+            }
+
+            function possible() {
+                document.getElementById("relative").style.animationDuration = 1;
+            }
+            
+
+        </script>
         <style>
+            #absolute{
+               /* visibility: hidden;*/
+                color: white;
+                border: none;
+            }
+
             button{
                 box-sizing: border-box;
             }
 
-            div {
+            #relative {
                 height: 10;
                 width: 10;
                 position: relative;
@@ -14,7 +31,7 @@
                 animation-timing-function: linear;
                 
             }
-            div:hover{
+            #relative:hover{
                 animation-play-state: running;
             }
             @keyframes MyTest {
@@ -40,13 +57,16 @@
                 95% {left: 95%;top:90%}
                 100%{left: 0%;top: 90%;}
                 
-            }
+            } 
 
         </style>
     </head>
-    <body>
-        <div>
-            <button>Click Me!</button>
+    <body id="Body" >
+        <div id="relative" >
+            <button onclick="backgroundChange()" id="Button">Click Me!</button>
+        </div>
+        <div id="absolute">
+            <button onclick="possible()"></button>
         </div>
 
     </body>
