@@ -3,19 +3,25 @@
         <script>
             function backgroundChange() {
                 document.getElementById("Body").style.backgroundColor = "green";
+                document.getElementsByClassName("absolute").style.backgroundColor = "green";
+            }
+            
+            function onLoad() {
+                document.getElementsByClassName("absolute").style.backgroundColor = fcfcfc;
             }
 
             function possible() {
-                document.getElementById("relative").style.animationDuration = 1;
+                document.getElementById("relative").style.animationIterationCount = 0;
             }
             
 
         </script>
         <style>
-            #absolute{
+            .absolute {
                /* visibility: hidden;*/
-                color: white;
-                border: none;
+               /* background-color: #fcfcfc;*/
+                height: 100;
+                width: 100;
             }
 
             button{
@@ -61,12 +67,12 @@
 
         </style>
     </head>
-    <body id="Body" >
+    <body onload="onLoad()" id="Body" >
         <div id="relative" >
             <button onclick="backgroundChange()" id="Button">Click Me!</button>
         </div>
-        <div id="absolute">
-            <button onclick="possible()"></button>
+        <div class="absolute">
+            <div class="absolute" onclick="possible()"></div>
         </div>
 
     </body>
