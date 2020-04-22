@@ -3,30 +3,25 @@
         <script>
             function backgroundChange() {
                 document.getElementById("Body").style.backgroundColor = "green";
-                document.getElementsByClassName("absolute").style.backgroundColor = "green";
+                document.getElementById("finish").style.visibility = "visible";   
             }
             
-            // function onLoad() {
-            //     document.getElementsByClassName("absolute").style.backgroundColor = fcfcfc;
-            // }
+      
 
             function possible() {
                 document.getElementById("relative").style.animationIterationCount = 0;
             }
 
-            function finish() {
-                document.getElementById("finish").style.visibility = visible;
-            }
-            
+           
 
         </script>
         <style>
-            .absolute {
-               /* visibility: hidden;*/
-               /* background-color: #fcfcfc;*/
+            /* .absolute {
+                visibility: hidden;
+                background-color: #fcfcfc;
                 height: 100;
                 width: 100;
-            }
+            } */
 
             button{
                 box-sizing: border-box;
@@ -89,7 +84,7 @@
         <div id="relative" >
             <button onclick="backgroundChange()" id="Button">Click Me!</button>
         </div>
-        <p id="text" >Press the <span onclick="possible(), finish()" >button!</span></p>
+        <p id="text" >Press the <span onclick="possible()" >button!</span></p>
         <!-- <div class="absolute" onclick="possible()"></div> -->
         <p id="finish" >Congratulations!</p>
 
