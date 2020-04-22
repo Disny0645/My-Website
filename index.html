@@ -1,9 +1,17 @@
 <html>
     <head>
         <script>
+
+            var clicks = 0;
+
+            if (clicks = 10) {
+                document.write(" Ha Ha u Noooob cus u press button a lot !!!!! XD ")
+            }
+
             function backgroundChange() {
                 document.getElementById("Body").style.backgroundColor = "green";
-                document.getElementById("finish").style.visibility = "visible";   
+                document.getElementById("finish").style.visibility = "visible"; 
+                clicks + 1;  
             }
             
       
@@ -11,8 +19,14 @@
             function possible() {
                 document.getElementById("relative").style.animationIterationCount = 0;
             }
+            
+            function onLoad() {
+               setTimeout(tutorial, 30000) 
+            }
 
-           
+            function tutorial() {
+                document.getElementById("tutorial1").style.visibility = "visible";
+            }
 
         </script>
         <style>
@@ -78,6 +92,10 @@
                 visibility: hidden;
             }
 
+            .tutorial {
+                visibility: hidden;
+            }
+
         </style>
     </head>
     <body onload="onLoad()" id="Body" >
@@ -87,6 +105,7 @@
         <p id="text" >Press the <span onclick="possible()" >button!</span></p>
         <!-- <div class="absolute" onclick="possible()"></div> -->
         <p id="finish" >Congratulations!</p>
+        <p class="tutorial" id="tutorial1" >Read the instructions!</p>
 
     </body>
 </html>
