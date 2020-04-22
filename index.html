@@ -6,12 +6,16 @@
                 document.getElementsByClassName("absolute").style.backgroundColor = "green";
             }
             
-            function onLoad() {
-                document.getElementsByClassName("absolute").style.backgroundColor = fcfcfc;
-            }
+            // function onLoad() {
+            //     document.getElementsByClassName("absolute").style.backgroundColor = fcfcfc;
+            // }
 
             function possible() {
                 document.getElementById("relative").style.animationIterationCount = 0;
+            }
+
+            function finish() {
+                document.getElementById("finish").style.visibility = visible;
             }
             
 
@@ -31,6 +35,7 @@
             #relative {
                 height: 10;
                 width: 10;
+                /* margin: 30; */
                 position: relative;
                 animation: MyTest 1ms infinite;
                 animation-play-state: paused;
@@ -41,9 +46,9 @@
                 animation-play-state: running;
             }
             @keyframes MyTest {
-                0% {left: 0px;top: 0%;}
-                5% {left: 95%;top:0%}
-                10%{left: 0%;top: 0%;}
+                0% {left: 0px;top: 5%;}
+                5% {left: 95%;top:5%}
+                10%{left: 0%;top: 5%;}
                 15%{left: 0px;top: 15%;}
                 20% {left: 95%;top:15%}
                 25%{left: 0%;top: 15%;}
@@ -65,15 +70,28 @@
                 
             } 
 
+            #text {
+                margin-top: 0px;
+                font-family: 'Times New Roman';
+                font-size: 20px;
+            }
+
+            #finish {
+                font-size: 100px;
+                font-family: 'Times New Roman';
+                text-align: center;
+                visibility: hidden;
+            }
+
         </style>
     </head>
     <body onload="onLoad()" id="Body" >
         <div id="relative" >
             <button onclick="backgroundChange()" id="Button">Click Me!</button>
         </div>
-        <div class="absolute">
-            <div class="absolute" onclick="possible()"></div>
-        </div>
+        <p id="text" >Press the <span onclick="possible(), finish()" >button!</span></p>
+        <!-- <div class="absolute" onclick="possible()"></div> -->
+        <p id="finish" >Congratulations!</p>
 
     </body>
 </html>
