@@ -4,14 +4,14 @@
 
             var clicks = 0;
 
-            if (clicks = 10) {
+            if (clicks > 10) {
                 document.write(" Ha Ha u Noooob cus u press button a lot !!!!! XD ")
             }
 
             function backgroundChange() {
+                clicks + 1; 
                 document.getElementById("Body").style.backgroundColor = "green";
                 document.getElementById("finish").style.visibility = "visible"; 
-                clicks + 1;  
             }
             
       
@@ -104,7 +104,7 @@
         </div>
         <p id="text" >Press the <span onclick="possible()" >button!</span></p>
         <!-- <div class="absolute" onclick="possible()"></div> -->
-        <p id="finish" >Congratulations!</p>
+        <p id="finish" >Congratulations! You're not an idiot</p>
         <p class="tutorial" id="tutorial1" >Read the instructions!</p>
 
     </body>
