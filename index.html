@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <html>
     <head>
         <script>
 
             var clicks = 0;
+            var Instruktions;
 
-            if (clicks > 10) {
-                document.write(" Ha Ha u Noooob cus u press button a lot !!!!! XD ")
-            }
-
+            
             function backgroundChange() {
                 clicks + 1; 
                 document.getElementById("Body").style.backgroundColor = "green";
                 document.getElementById("finish").style.visibility = "visible"; 
+                clearTimeout(Instruktions);
             }
             
       
@@ -21,7 +21,7 @@
             }
             
             function onLoad() {
-               setTimeout(tutorial, 30000) 
+               Instruktions = setTimeout(tutorial, 30000); 
             }
 
             function tutorial() {
