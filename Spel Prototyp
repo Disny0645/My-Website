@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html onmousemove="Coords(event), Move()" >
+<html onmousemove="Coords(event)" >
     <head>
 
         <style>
-            #OnMouse {
+            #onMouse {
                 height: 100;
                 width: 100;
                 border: 1px;
@@ -14,23 +14,22 @@
         </style>
 
         <script>
-            function Move() {
-                document.getElementById("OnMouse").style.marginLeft = x;
-                document.getElementById("OnMouse").style.marginTop = y;
-            }
-
+           
             function Coords(event) {
-                  var x = event.clientX;
-                  var y = event.clientY;
-                }
-            
+                var x = event.clientX;
+                var y = event.clientY;
+                console.log ("Y=",y,"X=",x)
+                document.getElementById("onMouse").style.marginLeft = x;
+                document.getElementById("onMouse").style.marginTop = y;
+
+            }
                 
         </script>
           
     </head>
 
     <body>
-        <div id="OnMouse"> </div>
+        <div id="onMouse"></div>
     </body>
 
 </html>
